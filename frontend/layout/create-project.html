@@ -1,0 +1,40 @@
+<div class="content-center" style="background-image: url('./frontend/img/texture-BG.jpg'); background-repeat: no-repeat; background-size: cover; height: 100%; opacity: 90%;">
+    <div class="bg-light lg-container animated fadeInRight">
+        <h2>Create New Project</h2>
+        <label>Create a project to develop your web application easy and smooth</label>
+
+        <hr>
+
+        <div class="bg-white" style="padding: 15px;">
+            <div class="row form-group">
+                <div class="col-lg-4">
+                    <label class="text-danger">*&nbsp;</label><label>Project Title</label>
+                </div>
+                <div class="col-lg-8">
+                    <input type="text" class="form-control" id="project-title">
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-lg-4">
+                    <label>Project Description</label>
+                </div>
+                <div class="col-lg-8">
+                    <textarea type="text" class="form-control" rows="6" id="project-description" style="resize: none;"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <button class="btn btn-sm btn-primary float-right" id="btn-create" style="margin-left: 10px;" onclick="createProject()">
+                    Create
+                </button>
+                <button class="btn btn-sm btn-default float-right" id="btn-close">
+                    &nbsp;Close&nbsp;
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,115 @@
+<div class="bg-light" style="height: 100vh; margin-top: -20px;">
+    <div class="row bg-white" style="box-shadow: 0px 0px 5px #dfdfdf;">
+        <div class="col-lg-12" style="padding: 15px 30px;">
+            <h1 id="project-title" style="margin-top: 0px; color: #8d8d8d;">Test Project</h1>
+        </div>
+    </div>
+    <div class="wrapper wrapper-content animated fadeInRight" style="height: 90vh;">
+        <div class="row" style="height: 100%;">
+            <!-- Left hand project explorer -->
+            <div class="col-lg-3">
+                <div class="bg-white dev-container" style="height: 100%;">
+                    <div class="text-navy" style="display: flex; border-bottom: 1px solid #e7e7e7; padding: 10px 15px; font-size: 16px;">
+                        <span><i class="fa fa-fax"></i></span>&nbsp;<h4 style="margin-left: 5px;">Project Explorer</h4>
+                    </div>
+                    <div style="padding: 15px 20px;">
+                        <div class="project-title">
+                            <h4 class="text-info" style="margin: 0px; font-size: 16px;">Test Project</h4>
+                            <button class="btn btn-xs btn-default" title="Cerate a new page" onclick="openModal('create-page-modal')" style="position: absolute; right: 5px; bottom: 5px;">
+                                <i class="fa fa-plus"></i>&nbsp;Create Page
+                            </button>
+                        </div>                            
+                        <div class="custom-slim-scroll" id="project-tree" style="height: 78vh; overflow-y: auto; overflow-x: hidden;">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right hand coding area -->
+            <div class="col-lg-9">
+                <div class="bg-white dev-container ibox" style="height: 100%; margin: 0px;">
+                    <div style="display: flex; border-bottom: 1px solid #e7e7e7; padding: 10px 15px; font-size: 16px; position: relative;">
+                        <span class="text-navy" style="display: flex; margin-top: 5px;">
+                            <i class="fa fa-fax"></i>
+                            &nbsp;<h4 style="margin-top: 0px; margin-left: 5px;">Coding Area</h4>
+                        </span>
+                        <span style="display: flex; margin-top: 5px;">
+                            &nbsp;&nbsp;<i class="fa fa-circle" style="font-size: 5px; margin-top: 8px; color: darkgray;"></i>&nbsp;&nbsp;
+                            <h4 class="text-info" style="margin-top: 0px;">Test Project</h4>
+                        </span>
+                        <span class="full-path d-none" style="display: flex; margin-top: 5px;">
+                            &nbsp;&nbsp;<i class="fa fa-chevron-right" style="font-size: 10px; margin-top: 4px; color: darkgray;"></i>&nbsp;&nbsp;
+                            <i class="fa fa-folder-open folder-icon"></i>
+                            &nbsp;<h4 style="margin-top: 0px; margin-left: 5px;" id="parent-name">Test Page1</h4>
+                        </span>
+                        <span class="full-path d-none" style="display: flex; margin-top: 5px;">
+                            &nbsp;&nbsp;<i class="fa fa-chevron-right" style="font-size: 10px; margin-top: 4px; color: darkgray;"></i>&nbsp;&nbsp;
+                            <i class="fa fa-code html-icon" id="file-icon"></i>
+                            &nbsp;<h4 style="margin-top: 0px; margin-left: 5px;" id="file-name">layout.html</h4>
+                        </span>
+                        <div class="ibox-tools" style="margin-top: -4px;"> 
+                            <button class="btn btn-sm btn-primary" style="margin-right: 10px;" id="btn-save">
+                                <i class="fa fa-floppy-o"></i>&nbsp;&nbsp;<span id="btn-text">Save</span>
+                            </button>                               
+                            <a class="fullscreen-link">
+                                <i class="fa fa-expand"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div style="padding: 15px 20px;">
+                        <div class="tabs-container">
+                            <ul class="nav nav-tabs" role="tablist" id="tab-list">
+                                
+                            </ul>                                
+                        </div>
+                        <div class="custom-slim-scroll" id="code-area" style="height: 78vh; overflow-y: auto; overflow-x: hidden;">
+                            <div class="tab-content">
+                                <textarea id="code-area" hidden></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="create-page-modal" class="modal fade" style="padding-right: 17px;">
+            <div class="modal-dialog" style="width: 400px; margin-top: 8%;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="fa-stack text-navy">
+                            <i class="fa fa-magic"></i>
+                            <i class="fa fa-fax merge-icon"></i>
+                        </span>
+                        <h4 class="modal-title">Create New Page</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label class="text-danger">*&nbsp;</label><label for="page-name">Enter new page name</label>
+                                    <input type="text" class="form-control" id="page-name"/>
+                                    <label class="text-danger d-none" id="imp-field" style="margin: 0px; margin-top: 5px;">* Mandatory Field</label>
+                                </div>
+                            </div>
+                        </div>                            
+                    </div>
+                    <div class="modal-footer">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <button class="btn btn-sm btn-primary float-right" id="btn-save" onclick="createNewPage()" style="margin-left: 10px;">
+                                    <i class="fa fa-floppy-o"></i>&nbsp;Save
+                                </button>
+                                <button class="btn btn-sm btn-default float-right" id="btn-close" data-dismiss="modal">
+                                    <i class="fa fa-times"></i>&nbsp;Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,113 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.content-center {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.lg-container {
+    width: 80vmin;
+    height: 50vmin;
+    border: 1px solid #b3b3b3;
+    box-shadow: 0px 1px 6px #4a4a4a;
+    border-radius: 6px;
+    padding: 20px 18px;
+}
+
+.wrapper-content {
+    padding: 10px;
+}
+
+.modal-body {
+    background-color: #ebf3f3;
+}
+
+.merge-icon {
+    position: absolute;
+    right: 6px;
+    top: 8px;
+}
+
+.custom-slim-scroll::-webkit-scrollbar {
+    width: 10px;
+}
+.custom-slim-scroll::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+.custom-slim-scroll::-webkit-scrollbar-thumb {
+    background-color: lightgrey;
+    border-radius: 5px;
+}
+
+/* Project development page CSS - begin */
+.dev-container {
+    border: 1px solid #dbdbdb;
+    box-shadow: 0px 0px 5px #dbdbdb;
+    border-radius: 6px;
+}
+
+.jstree-open > .jstree-anchor > .fa-folder:before {
+    content: "\f07c";
+}
+
+.jstree-default .jstree-icon.none {
+    width: 0;
+}
+
+.project-title {
+    position: relative;
+    padding: 8px 6px;
+    display: flex;
+}
+.project-title:hover {
+    background-color: #e6f2f4;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.folder-icon {
+    color: #f1b200;
+}
+.html-icon {
+    color: green;
+}
+.css-icon {
+    color: dodgerblue;
+}
+.js-icon {
+    color: orangered;
+}
+
+.jstree-default .jstree-anchor {
+    height: 26px;
+    line-height: 26px;
+    width: 100%;
+    position: relative;
+}
+
+.page-del-btn {
+    position: absolute;
+    right: 28px;
+    top: 1px;
+    font-size: 0.6rem;
+}
+
+.nav-tabs .nav-link {
+    border: 1px solid #ededed !important;
+    background-color: #f9f9f9;
+}
+
+.nav-tabs {
+    border: none !important;
+}
+
+.CodeMirror {
+    font-size: 14px;
+    line-height: 1.6;
+}
